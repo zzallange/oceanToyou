@@ -1,0 +1,141 @@
+.inner-wrap {
+  margin: 0 auto;
+  width: 1400px;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  height: 135px;
+  transition: all 0.2s ease-in-out;
+}
+
+.head-util {
+  width: 100%;
+  height: 45px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.head-util .util-menu {
+  display: flex;
+  height: 45px;
+  justify-content: flex-end;
+  align-items: center;
+}
+.head-util .util-menu li {
+  margin: 0 10px;
+}
+.head-util .util-menu li a {
+  position: relative;
+  font-size: 14px;
+  letter-spacing: -0.5px;
+  color: #fff;
+}
+.head-util .util-menu li a:before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 5px;
+  width: 1px;
+  height: 60%;
+  background: #fff;
+}
+.head-util .util-menu li:first-child a:before {
+  display: none;
+}
+
+.head-area {
+  position: relative;
+}
+.head-area h1 {
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  z-index: 100;
+  transform: translateX(-50%);
+}
+.gnb-area {
+  display: table;
+  width: 100%;
+  height: 90px;
+}
+.gnb-area .nav,
+.gnb-area .btn-book {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.gnb-area .nav {
+  width: 1250px;
+}
+.gnb-area .nav .gnb li {
+  float: left;
+  margin-right: 60px;
+}
+.gnb-area .nav .gnb li:last-child {
+  float: right;
+}
+.gnb-area .nav .gnb li a {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
+}
+
+.gnb-area .btn-book a {
+  display: block;
+  width: 130px;
+  height: 45px;
+  border: 1px solid #fff;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 43px;
+  color: #fff;
+}
+
+.header:hover {
+  background: #fff;
+}
+.header-clone {
+  position: fixed;
+  top: -135px;
+  background: #fff;
+}
+.header-clone.visible {
+  top: 0;
+}
+
+.header:hover .head-util,
+.header-clone .head-util {
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+}
+.header:hover .head-util .util-menu li a,
+.header-clone .head-util .util-menu li a {
+  color: #808080;
+}
+.header:hover .head-util .util-menu li a:before,
+.header-clone .head-util .util-menu li a:before {
+  background: rgba(0, 0, 0, 0.2);
+}
+.header:hover .gnb-area .nav .gnb li a,
+.header-clone .gnb-area .nav .gnb li a {
+  color: #222;
+}
+.header:hover .gnb-area .nav .gnb li a:hover,
+.header-clone .gnb-area .nav .gnb li a:hover {
+  color: #b38859;
+}
+.header:hover .btn-book a,
+.header-clone .btn-book a {
+  border-color: #b38859;
+  color: #b38859;
+}
+
+.container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
